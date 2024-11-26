@@ -32,7 +32,7 @@
     contains
         private
         procedure,non_overridable :: destroy_base  !! destructor for the abstract type
-        procedure,non_overridable :: set_extrap_flag !! internal routine to set the `extrap` flag
+        procedure,public,non_overridable :: set_extrap_flag !! internal routine to set the `extrap` flag
         procedure(destroy_func),deferred,public :: destroy  !! destructor
         procedure(size_func),deferred,public :: size_of !! size of the structure in bits
         procedure,public,non_overridable :: status_ok  !! returns true if the last `iflag` status code was `=0`.

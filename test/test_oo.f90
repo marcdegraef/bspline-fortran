@@ -99,6 +99,9 @@
      call s5%initialize(x,y,z,q,r,fcn_5d,kx,ky,kz,kq,kr,iflag(5))
      call s6%initialize(x,y,z,q,r,s,fcn_6d,kx,ky,kz,kq,kr,ks,iflag(6))
 
+     call s2%set_extrap_flag(.TRUE.)
+     write (*,*) 'extrap flag set to .TRUE.'
+     
      if (any(iflag/=0)) then
          do i=1,6
              if (iflag(i)/=0) then
